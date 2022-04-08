@@ -5,8 +5,7 @@
              Padding = "20">
     
     <StackLayout>
-        <Label Text="{Binding Greetings}" />
-        <ListView x:Name="DataModelList" ItemsSource="{Binding CityList}" ItemTapped="ListViewItemTapped" >
+        <ListView x:Name="DataModelList" ItemsSource="{Binding CityList}">
 		    <ListView.ItemTemplate>
 			    <DataTemplate>
 				    <TextCell Text="{Binding Name}" Detail="{Binding Population}"/>

@@ -43,9 +43,6 @@
     <Compile Update="Views\UI\SettingValueExercisePage.xaml.cs">
       <DependentUpon>SettingValueExercisePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UI\SettingValueExplorePage.xaml.cs">
-      <DependentUpon>SettingValueExplorePage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>

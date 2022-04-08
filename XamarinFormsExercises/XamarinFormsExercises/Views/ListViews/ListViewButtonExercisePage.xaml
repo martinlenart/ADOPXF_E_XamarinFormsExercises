@@ -8,9 +8,22 @@
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
- 						</StackLayout>
-					</ViewCell>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="3">
+                                <Image Source="{Binding ImageSrc}" HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+                                <Label HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" 
+									  Text="{Binding Name}"/>
+                                <Label HorizontalOptions="Start" FontSize="12" FontAttributes="Bold" 
+									   Text="{Binding Continent}"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" WidthRequest="260">
+                                <Button x:Name="MoreButton" Text="Find out more" HorizontalOptions="EndAndExpand" 
+									 Clicked="MoreButton_Clicked" CommandParameter="{Binding .}"/>
+                            </StackLayout>
+                        </StackLayout>
+    				</ViewCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>

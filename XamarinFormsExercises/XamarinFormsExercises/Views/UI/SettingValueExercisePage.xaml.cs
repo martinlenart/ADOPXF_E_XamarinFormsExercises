@@ -9,19 +9,15 @@ namespace XamarinFormsExercises.Views.UI
         public SelectingValueExercisePage()
         {
             InitializeComponent();
+            picker.ItemsSource = Person.Factory.CreateRandom(10);
         }
 
         private void checkbox_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            var chk = sender as CheckBox;
-            lblPropChanged.IsVisible = chk.IsChecked;
-           
         }
 
         private void slider_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            var sld = sender as Slider;
-            lblPropChanged.Opacity = sld.Value / 100;
         }
   
         private void stepper_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -34,25 +30,18 @@ namespace XamarinFormsExercises.Views.UI
 
         private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            var dt = sender as DatePicker;
-            lblPropChanged.Text = $"{dt.Date:F}";
         }
 
         private void TimePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
         }
 
-        private void picker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-        }
-
         private void picker_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             var pic = sender as Picker;
-            if (pic.SelectedIndex != -1)
-            {
-                lblPropChanged.Text = pic.Items[pic.SelectedIndex];
-            }
+            if (pic.SelectedIndex == -1) return;
+
+            lblPropChanged.Text = pic.Items[pic.SelectedIndex];
         }
     }
 }
