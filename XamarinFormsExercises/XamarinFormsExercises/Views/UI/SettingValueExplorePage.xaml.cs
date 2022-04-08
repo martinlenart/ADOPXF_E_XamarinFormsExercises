@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using XamarinFormsExercises.Models;
 
 namespace XamarinFormsExercises.Views.UI
 {
@@ -7,6 +8,17 @@ namespace XamarinFormsExercises.Views.UI
         public SelectingValueExplorePage()
         {
             InitializeComponent();
+        }
+
+        private void picker_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            var s = (Picker)sender;
+            if (s.SelectedIndex == -1) return;
+
+            Person person1 = (Person) s.SelectedItem;
+
+            string personsAsString = s.Items[s.SelectedIndex];
+            Person person2 = (Person) s.ItemsSource[s.SelectedIndex];
         }
     }
 }
