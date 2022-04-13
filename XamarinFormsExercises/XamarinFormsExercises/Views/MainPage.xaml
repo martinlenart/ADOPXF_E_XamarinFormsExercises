@@ -61,6 +61,7 @@
                 <TextCell Text="Carousel Content Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Navigation.CarouselNavigationExercise}" />
             </TableSection>
             <TableSection Title="Non Trivial Binding">
+                <TextCell Text="Grid Binding Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding.GridBindingExercise}" />
                 <TextCell Text="Binding Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding.BindingExercise}" />
             </TableSection>
         </TableView.Root>
