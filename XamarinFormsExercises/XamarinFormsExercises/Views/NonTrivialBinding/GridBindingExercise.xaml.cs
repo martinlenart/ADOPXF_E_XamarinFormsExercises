@@ -8,6 +8,7 @@ namespace XamarinFormsExercises.Views.NonTrivialBinding
 {
 	public partial class GridBindingExercise : ContentPage
 	{
+		private GridBindingExerciseViewModel viewModel => BindingContext as GridBindingExerciseViewModel;
 		public GridBindingExercise()
 		{
 			InitializeComponent();

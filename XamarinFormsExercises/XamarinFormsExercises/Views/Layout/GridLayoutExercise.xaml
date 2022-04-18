@@ -4,7 +4,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="XamarinFormsExercises.Views.Layout.GridLayoutExercise" Title="Grid Exercise">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="Bombay.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="150"/>
+            <Image Source="Camelface.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="150"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
